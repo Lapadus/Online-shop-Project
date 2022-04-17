@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <meta name="description" content="Cele mai bune produse de birotică și papetărie, cele mai cool rechizite școlare,cele mai cunoscute carti">
+        <meta name="keywords" content="librărie, școala, papetărie, rechizite">
+        <%- include("../Fragmente/head.ejs") %>
+        <link href="/Resurse/Css/produse_mic.css" rel="stylesheet" type="text/css" />
+        <link href="/Resurse/Css/produse_mediu.css" rel="stylesheet" type="text/css" />
+        <link href="/Resurse/Css/produse.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="/Resurse/Js/produse.js"></script>
+
+    </head>
+    <body id='variabile'>
+        <%- include("../Fragmente/header.ejs") %>
+        <main>
+            <section id="input">
+                <h2>Filtrari</h2>
+                <label> Nume: 
+                    <input id="i_text" type="text">
+                </label>
+                <label>Pret minim: 
+                    <input id="i_range" type="range" min="1" max="200">
+                </label>
+                <label>Pret maxim: 
+                    <input id="i_rangeMax" type="range" min="1" max="200">
+                </label>
+                <label>Reducere:
+                    <input id="i_check1" name="gr_chck" checked value="10" type="checkbox"/>
+                </label>
+                <label>Descriere:
+                    <textarea id="i_textarea"></textarea>
+                </label>
+                <label>Categorie:
+                    <select id="i_sel_simplu">
+                        <option value="toate" id="Toate">toate</option>
+                        <% for(let opt of locals.optiuni){ %>
+                            <option value="<%- opt %>"><%- opt %></option>
+                        <% } %>
+                    </select>
+                </label>
+                <label>Culori:
+                    <select id="i_sel_multiplu" multiple size="4">
+                        <% for(let cul of locals.culori){ %>
+                            <option value="<%- cul %>" selected><%- cul %></option>
+                        <% } %>
+                    </select>
+                </label>
+
+                <div>
+                <label>Garantie(zile) &lt 10
+                    <input id="i_rad1" checked name="gr_rad" value="1" type="radio"/>
+                </label><br>
+                <label>10 &le; Garantie(zile) &le; 20
+                    <input id="i_rad2" name="gr_rad" value="2" type="radio"/>
+                </label><br>
+                <label>20 &le; Garantie(zile) &le; 30
+                    <input id="i_rad3" name="gr_rad" value="3" type="radio"/>
+                </label><br>
+                <label>Toate
+                    <input id="i_rad4" checked name="gr_rad" value="4" type="radio"/>
+                </label>
+                </div>
+                <br>
+                <button id="b1">Filtrare</button>
+                <button id="crescator">Sortare crescatoare</button>
+                <button id="descrescator">Sortare descrescatoare</button>
+                <button id="calculare">Calculare</button>
+                <button id="reset">Resetare</button>
+            </section>
+
+            <p id="p-suma">Apasati Alt+"c" pentru a calcula suma preturilor produselor afisate. </p>
+            
+            <section id='produse'>
+                <h2>Produse</h2>
+                <div class='grid-produse'>
+                    <% for(let prod of locals.produse){ %>
+                        <article class="produs">
+                            <h3 class="nume">Nume: <a href="/produs/<%- prod.id %>"><span class="val-nume"><%- prod.nume %></span></a></h3>
+                            <p class="categorie">Categorie: <span class="val-categorie"><%- prod.categ_mica %></span></p>
+                            <div class="info-prod">
+                                <p class="pret">Pret: <span class="val-pret"><%- prod.pret %> lei</span></p>
+                                <p class="timp_garantie">Garantie: <span class="val-termen_garantie"><%- prod.timp_garantie %> zile</span></p>
+                                <p class="reducere">Reducere: <span class="val-reducere"><%- prod.reducere %></span></p>
+                            </div>
+                            <p class="descriere">Descriere: <span class="val-descriere"><%- prod.descriere %></span></p> 
+
+                            <p>Culoare: <span class="culoare"> <%- prod.culoare %> </span></p>
+                            <figure>
+                                <a href="/produs/<%- prod.id %>">
+                                    <img src="<%- prod.imagine %>">
+                                </a>
+                            </figure>
+                            <label class="selecteaza-cos">
+                                Adauga in cos<br/>
+                                <input type="checkbox" class="select-cos" value="<%-prod.id %>" autocomplete="off">
+                            </label>
+                            <label class = 'cantitate'> Introduceti cantitatea:
+                                <input type="number" class="cantitate_cos" name="quatity" value="1" min="1" max="99">
+                            </label>
+                        </article>
+                    <% } %>
+                </div>
+            </section> 
+        </main>
+        <%- include("../Fragmente/footer.ejs") %>
+    </body>
+
+</html>

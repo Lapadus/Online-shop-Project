@@ -1,0 +1,9 @@
+@media screen and (min-width: 851px){
+   ul.meniu span{
+        display: none;
+    }
+    #inl{
+        margin: 0;
+        padding: 0;
+    }
+}

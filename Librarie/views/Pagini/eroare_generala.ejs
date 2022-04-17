@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <meta name="description" content="Cele mai bune produse de birotică și papetărie, cele mai cool rechizite școlare,cele mai cunoscute carti">
+        <meta name="keywords" content="librărie, școala, papetărie, rechizite">
+        <%- include("../Fragmente/head.ejs") %>
+    </head>
+    <body id='variabile'>
+        <%- include("../Fragmente/header.ejs") %>
+        <main>
+            <section>
+                <h2 id="titlu_eroare"><%- locals.errMsg %></h2>
+                <img src="Resurse\Imagini\eroare_generala.jpg" id="img_eroare">
+            </section>
+        </main>
+        <%- include("../Fragmente/footer.ejs") %>
+    </body>
+</html>

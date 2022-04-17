@@ -1,0 +1,28 @@
+@media screen and (max-width: 650px) {
+    #container{
+        display: grid;
+        grid-template-areas:"welcome"
+                            "calendar"
+                            "orar"
+                            "online_user"
+                            "anunturi"
+                            "statistici"
+                            "server"
+                            "noutati"
+                            "promotii"
+                            "diy"
+                            "bestseller"
+                            "intrebari"
+                            "galerie_statica"
+                            "galerie_animata";
+        grid-template-columns: 100%;
+        grid-gap: 1.5em; 
+        float: left;
+    }
+    img#welcome_img{
+        display: none;
+    }
+    table{
+        overflow-x: scroll;
+    }
+}

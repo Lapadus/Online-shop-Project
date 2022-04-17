@@ -1,0 +1,33 @@
+div.tab_iframe a{
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    display:flex;
+    width: 120px;
+    color:black;
+    border:3px solid var(--fundal_border);
+
+    /*fara border in partea de jos*/
+    border-left: none;
+
+    /*rotunjesc doar colturile de sus:*/
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: width 500ms linear;
+    background-color: var(--iframe_tab);
+
+}
+
+div.tab_iframe{
+    margin-left: 20.7rem;
+    position: absolute;
+}
+iframe{
+    margin-left: 10px;
+    padding: 0;
+    border: solid 1rem var(--fundal_border);
+}
+div.tab_iframe a:hover{
+    width: 140px;
+}

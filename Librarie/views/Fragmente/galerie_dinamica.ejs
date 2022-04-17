@@ -1,0 +1,20 @@
+<section id="galerie_animata">
+    <h2>Galerie animata</h2>
+    <div id="grid-galerie-animata">
+        <div class="grid_3col">
+            <% for (let imag of locals.imagini_animate){ %>
+                    <figure>
+                        <picture>
+                            <source srcset="/<%- imag.mic %>" media="(max-width: 650px)" />
+                            <source srcset="/<%- imag.mediu %>" media="(max-width: 850px)" />
+                            <img src="/<%- imag.mare %>" alt="<%- imag.alt || imag.titlu%>" />
+                        </picture>
+                        <figcaption>
+                            <%- imag.descriere %>
+                        </figcaption>
+                    </figure>
+                <% } %>
+                
+        </div>
+    </div>
+</section>

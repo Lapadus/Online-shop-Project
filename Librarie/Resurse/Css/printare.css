@@ -1,0 +1,62 @@
+footer a, #covid{
+    text-decoration: none;
+    color: black;
+}
+#watermark {
+  display: block;
+  position: fixed; /*apare pe toate paginile*/
+  bottom: 0;
+  color: rgba(0, 0, 0, 0.4);
+  right: 0;
+  width: 4cm;
+  height: 1cm;
+  border: 3px solid black;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  opacity: 0.4;
+}
+#banner{
+    position: absolute;
+    left: 15%;
+    bottom: 0%;
+    width: 70vw;
+    border: 4px solid black;
+}
+img, video, iframe, #link_top, #sageata, #sus{
+    display: none;
+}
+nav{
+    outline: none;
+}
+nav ul.meniu li{
+    list-style-type: disc;
+    padding: 5px;
+    border: none;
+}
+nav ul.meniu{
+    padding: 5px;
+    padding-left: 30px;
+}
+nav ul.meniu>li{
+    float:none;
+    border: none;
+}
+#container{
+    page-break-before: always;
+}
+div.tab_iframe a{
+    display: none;
+}
+footer{
+    page-break-before: always;
+}
+@page:left{
+    margin-left:3cm;
+    margin-right:1cm;
+    border-radius: 20cm;
+}
+@page:right{
+    margin-right:3cm;
+    margin-left:1cm;
+}

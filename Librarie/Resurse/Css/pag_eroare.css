@@ -1,0 +1,17 @@
+#img_eroare{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+}
+#titlu_eroare{
+    display: block;
+    width: 50%;
+    padding: 7px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(245, 199, 143);
+    font-weight: bold;
+    text-decoration: underline;
+}

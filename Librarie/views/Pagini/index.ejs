@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <meta name="description" content="Cele mai bune produse de birotică și papetărie, cele mai cool rechizite școlare,cele mai cunoscute carti">
+        <meta name="keywords" content="librărie, școala, papetărie, rechizite">
+        <%- include("../Fragmente/head.ejs") %>
+        <link href="/Resurse/Css/calendar.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body >
+        <%- include("../Fragmente/header.ejs") %>
+        <main>
+            <div id="container">
+                <section id="welcome">
+                    <h2>Bine ați venit! SUNT EJS!</h2>
+                    <p>Ne bucurăm că ați accesat librăria nostră virtuală de unde vă puteți cumpăra cele mai <i>cool</i> rechizite, dar și produse
+                        de papetărie.</p> 
+                    <p><span id ="tema" class="fas fa-sun"></span><button id="schimba_tema">Schimba tema</button></p> 
+                    <p>Transformă-ți atât biroul de unde lucrați cât și mersul la școală într-o experiență de neuitat alături de noi! </p>
+                    <div id="rechizite">Rechizite</div>
+                    <div id="birotica">Birotică</div>
+                    <div id="papetarie">Papetărie</div>
+                    <div id="librarie">Librărie</div> 
+                    </br>
+                    </br>
+                    <div id="desc">
+                        <p>Vă puteți echipa direct din magazinul nostru fizic, cât și din</p>
+                        <p> magazinul nostru online, plasând rapid o comandă.</p>
+                    </div>
+                    <!-- <img src="Resurse\Imagini\Pag1\welcome.png" alt="text" title="welcome" id="welcome_img" /> -->
+                </section>
+                <section id="noutati">
+                    <h2>Noutăți</h2>
+                    <p>Deoarece ne dorim ca produsele noastre să fie cât mai diversificate vom încerca să aducem periodic diverse modele.</p>
+                    <p>Așadar, nu uitați să verficați periodic secțiunea cu <b>noutăți</b> pentru a fi in pas cu ultimele modele. </p>
+                    <section>
+                        <h3>Ghiozdane</h3>
+                        <p>Începutul de an școlar vine cu noi modele de ghiozdane, de diverse dimensiuni pentru a oferi încredere și spor elevului.
+                            Alege ceea ce ți se potrivește cel mai bine!
+                        </p>
+                        <ul>
+                            <li>Ghiozdan școlari cu prețuri până în 70 de lei</li>
+                            <li>Ghiozdan preșcolari cu prețuri până în 90 de lei</li>
+                            <li>Ghiozdan liceeni cu prețuri până în 100 de lei</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Blocuri de desen</h3>
+                        <p>Întrucât ne dorim să salvăm natura am conceput noile modele de bloc de desen ale căror pagini sunt create din materiale
+                            <strong>bio</strong>, reciclate. Cu timpul ne dorim ca raionul de papetărie să fie alcătuit complet doar din materiale reciclate. 
+                        </p>
+                        <ol>
+                            <li>Bloc A4 - 10 lei</li>
+                            <li>Bloc A3 - 15 lei</li>
+                            <li>Bloc A1 - 20 lei</li>
+                        </ol>
+                    </section>
+                </section>
+                <section id="anunturi">
+                    <h2>Anunțuri</h2>
+                    <p>Pentru a fi la curent cu noile anunțuri privind atât funcționarea <i>online</i> a magazinului cât și funcționarea 
+                    în format fizic, nu ezita să arunci o privire în secțiunea de anunțuri.
+                    </p>
+                    <article>
+                        <h3><a href="https://ro.wikipedia.org/wiki/Pandemia_de_COVID-19" target="_blank" id="covid">Pandemia COVID-19</a></h3>
+                        <ul>
+                            <li>Din cauza situației pandemice, <strong>prezența va fi redusă cu 50% </strong>în magazine.</li>
+                            <li><strong>Distanțarea socială</strong> trebuie să fie de minim 1,5 metri între persoane.</li>
+                            <li><strong>Masca obligatorie </strong>în incinta magazinului și la 50 de metri de acesta.</li>
+                        </ul>
+                    </article>
+                    <article>
+                        <h3>Întârzierea comenzilor</h3>
+                        <p>Datorită numărului mare de comenzi, data de livrare poate fi prelungită cu 1-2 zile lucrătoare. Vă mulțumim!</p>
+                    </article>
+                    <article>
+                        <h3>Facem angajări!</h3>
+                        <p>Cautți un loc de munca stabil? Noi te așteptăm pentru poziția de vânzător. Ne poți trimite CV-ul tău la adresa de mail 
+                            librarie.papetarie@birotica.ro
+                        </p>
+                    </article>
+                </section>
+                <section id="promotii">
+                    <h2>Promoții</h2>
+                    <p>Nu uita să verifici secțiunea de <b>promoții</b> unde vei găsi rechizitele tale preferate, dar <b>grăbește-te</b> deoarece
+                        acestea sunt în stoc redus!!!</p>
+                    <section>
+                        <h3>Pachetul <em>librăria veselă</em></h3>
+                        <p>Această ofertă cuprinde un pachet complet cu manualele de care ai nevoie în noul an școlar. Tu alege din librărie setul
+                            de manuale, iar noi îți putem trimite pachetul chiar la tine acasă!
+                        </p>
+                        <p>Cumpără un set complet din librăria noastră și vei beneficia de 20% reducere plus un penar echipat cadou!!!</p>
+                            <details>
+                                <summary>Clasele 1-4</summary>
+                                    <ol>
+                                        <li>Clasa 1</li>
+                                        <li>Clasa 2</li>
+                                        <li>Clasa 3</li>
+                                        <li>Clasa 4</li>
+                                    </ol>
+                                </details>
+                                <details>
+                                    <summary>Clasele 5-8</summary>
+                                        <ol>
+                                            <li>Clasa 5</li>
+                                            <li>Clasa 6</li>
+                                            <li>Clasa 7</li>
+                                            <li>Clasa 8</li>
+                                        </ol>
+                                    </details>
+                                <details>
+                                    <summary>Clasele 9-12</summary>
+                                        <ol>
+                                            <li>Clasa 9</li>
+                                            <li>Clasa 10</li>
+                                            <li>Clasa 11</li>
+                                             <li>Clasa 12</li>
+                                        </ol>
+                                </details>
+                    </section>
+                </section>
+                <section id="bestseller">
+                    <h2><i>Bestsellers</i></h2>
+                    <p>Știm cât de pasionați sunteți atât de rechizitele din librăria noastră cât și de produsele de papetărie și birotică, așa că vă 
+                        propunem o listă cu cele mai căutate și cele mai vândute produse din stocul nostru! </p>
+                    <p>Deoarece sunt atât de dorite de voi și atât de folosite 
+                        la școală, începând cu data de 17 Noiembrie, toți elevii vor beneficia de transport gratuit la aceste produse.
+                    </p>
+                    <section>
+                        <h3>Materiale <i>crafting</i></h3>
+                        <p>Mergi la școală în culori și totul va deveni mai frumos.</p>
+                        <ul>
+                            <li>Hârtie <i>quilling</i></li>
+                            <li>Sârmă plușată</li>
+                            <li>Glitter</li>
+                            <li>Lipici cu sclipici</li>
+                        </ul>
+                    </section>
+                </section>
+                <section id="diy">
+                    <h2>Idei <abbr title="Do it youself"><i>D.I.Y.</i></abbr></h2>
+                    <p>Nu degeaba în topul vânzărilor din librărie se gasesc produsele de crafting, deoarece pe site-ul nostru găsiți săptămânal noi idei 
+                        legate de cum puteți să vă jucați în timpul liber folosind produsele noastre.</p>
+                    <p>Săptămâna aceasta vă vom învăța să faceti mărțișoare folosind hârtia și acul pentru <i>quilling</i></p>
+                    <ul>
+                        <li>Așeaza acul de <i>quilling</i> la marginea unui fâșii de hârtie și încearcă să fie cât mai drept!</li>
+                        <li>Rotește acul pentru <i>quilling</i> înspre tine, iar cu cealaltă mână ține cercul care tocmai se formează.</li>
+                        <li>Când te apropii de capătul hârtiei, pune o picătura de lipici la capătul hârtiei și rotește pentru a finaliza.</li>
+                        <li>Când cerculețul este gata, lipește-l pe o foaie și continuă să faci cerculețe și să creezi diverse forme.</li>
+                    </ul>
+                    <p>Pentru o mai bună înțelegere urmăriți pașii și în videoclipurile de mai jos!</p>
+                    <div id="iframe_container">
+                    <div class="tab_iframe">
+                        <a href="https://www.youtube.com/embed/DvprA3JNTL4" target="quilling">Flori din <i> quilling</i></a>
+                        <a href="https://www.youtube.com/embed/_5t5EtYxF58" target="quilling">Mărțișoare</a>
+                    </div>
+                    <iframe src="https://www.youtube.com/embed/DvprA3JNTL4" name="quilling">Din pacate acest videoclip nu poate fi vizionat</iframe>
+                    </div>
+                    <p>Spor la decorat! Și nu uitați să verificați site-ul pentru noi metode de crafting!</p>
+                </section>
+                <section id="orar">
+                    <h2>Orar</h2>
+                    <p>Înainte de a veni la sediul nostru fizic, verificați programul de lucru. Mulțumim!</p>
+                    <div id="container-tabel">
+                        <table id="tabel">
+                            <caption>Programul de lucru la magazinul fizic</caption>
+                            <thead>
+                                <tr>
+                                    <th>Ora</th>
+                                    <th>Luni</th>
+                                    <th>Marți</th>
+                                    <th>Miercuri</th>
+                                    <th>Joi</th>
+                                    <th>Vineri</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>10</th>
+                                    <td>deschis</td>
+                                    <td>închis</td>
+                                    <td>închis</td>
+                                    <td>deschis</td>
+                                    <td>deschis</td>
+                                </tr>
+                                <tr>
+                                    <th>11</th>
+                                    <td>deschis</td>
+                                    <td>inchis</td>
+                                    <td>închis</td>
+                                    <td>deschis</td>
+                                    <td>deschis</td>
+                                </tr>
+                                <tr>
+                                    <th>12</th>
+                                    <td>deschis</td>
+                                    <td>deschis</td>
+                                    <td>închis</td>
+                                    <td>deschis</td>
+                                    <td>deschis</td>
+                                </tr>
+                                <tr>
+                                    <th>13</th>
+                                    <td>închis</td>
+                                    <td>deschis</td>
+                                    <td>deschis</td>
+                                    <td>deschis</td>
+                                    <td>deschis</td>
+                                </tr>
+                                <tr>
+                                    <th>14</th>
+                                    <td>închis</td>
+                                    <td>deschis</td>
+                                    <td>deschis</td>
+                                    <td>deschis</td>
+                                    <td>deschis</td>
+                                </tr>
+                                <tr>
+                                    <th>15</th>
+                                    <td>închis</td>
+                                    <td>închis</td>
+                                    <td>deschis</td>
+                                    <td>deschis</td>
+                                    <td>închis</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan = "6">Va asteptam!</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <img src="Resurse\Imagini\Pag1\agenda.png" alt="text" title="agenda" id="agenda_img" />
+                </section>
+                <section id="intrebari">
+                    <h2>Întrebari frecvente</h2>
+                    <p>Pentru orice nelămuriri nu ezitați să ne trimiteți întrebări și nu uitați să verificați secțiunea de întrebări frecvente!</p>
+                    <details>
+                        <summary>În cât timp ajung comenzile făcute online?</summary>
+                        <p>Comenzile plasate vor ajunge in 2-3 zile lucrătoare, iar în cazul unei întârzieri veți fi anunțați în prealabil.</p>
+                    </details>
+                    <details>
+                        <summary>Cum pot face returul unui produs?</summary>
+                        <p>Returul poate fi făcut completând formularul găsit pe site.</p>
+                    </details>
+                    <details>
+                        <summary>Produsul cumpărat poate veni împachetat pentru a putea fi dat cadou?</summary>
+                        <p>Sigur, în cazul în care vă doriți acest lucru puteți să bifați secțiunea de cadou înaite de a plasa comanda.</p>
+                    </details>
+                </section>
+                <section id="calendara">
+                    <h2>Calendar</h2>
+                    <div id="calendar">
+                        <div>L</div>
+                        <div>Ma</div>
+                        <div>Mi</div>
+                        <div>J</div>
+                        <div>V</div>
+                        <div>S</div>
+                        <div>D</div>
+                        <% 
+                        nrZile=[31,28,31,30,31,30,31,31,30,31,30,31];
+                        
+                        d=new Date(); //observatie: este data serverului nu a clinetului; codul ejs fiind compilat pe server
+                        anCurent=d.getFullYear();
+                        lunaCurenta=d.getMonth();
+                        if(anCurent%400==0 || (anCurent%4==0 && anCurent%100!=0)) nrZile=29;
+                        let nrZileCalendar=nrZile[lunaCurenta]
+                        primaZiLuna=new Date(anCurent, lunaCurenta, 1);
+                        ultimaZiLuna=new Date(anCurent, lunaCurenta, nrZileCalendar);
+                        ziSaptPrimaZiLuna=(primaZiLuna.getDay()-1+7)%7;
+                        ziSaptUltimaZiLuna=(ultimaZiLuna.getDay()-1+7)%7;
+                        for (let i=0; i < ziSaptPrimaZiLuna; i++){
+                        %>
+                        <div></div> 
+                        <% } 
+                        for (let i=1;i<=nrZileCalendar;i++){
+                            var obiectLuni = null;
+                            if(locals.luni)
+                                obiectLuni = locals.luni.find(function(elem){ return elem.data.valueOf()==new Date(anCurent,lunaCurenta,i).valueOf()})
+
+                            var obiectDuminica = null;
+                            if(locals.duminica)
+                                obiectDuminica = locals.duminica.find(function(elem){ return elem.data.valueOf()==new Date(anCurent,lunaCurenta,i).valueOf()})
+                        
+                            var obiectEvenimente=null;
+                            if(locals.evenimente)
+                                 obiectEvenimente=locals.evenimente.find(function(elem){ return elem.data.valueOf()==new Date(anCurent,lunaCurenta,i).valueOf()})
+                            if(obiectDuminica)
+                            {
+                            %>
+                                <div class="zi eveniment" title="<%= obiectDuminica.text %>"><%= i %></div> 
+                            <%
+                            }
+                            else if(obiectLuni)
+                            {
+                            %>
+                                 <div class="zi eveniment" title="<%= obiectLuni.text %>"><%= i %></div> 
+                            <%
+                            }
+                             else if(obiectEvenimente)
+                             {
+                             %>
+                             <div class="zi eveniment" title="<%= obiectEvenimente.text %>"><%= i %></div> 
+                             <%
+                             }
+                             else{
+                            %>
+                            <div class="zi"><%= i %></div> 
+                            <% } 
+                        } %>
+                    </div>
+                </section>
+                <section id="online_user">
+                    <h2>Online Users</h2>
+                    <p><b>Utilizatori online</b> (în ultimele 5.5 minute):
+                        <ol reversed>
+                            <% for (let i=0; i< locals.utiliz_online.length-1; i++){ %>
+                                <li>[<%= locals.utiliz_online[i].username %>]-[<%- locals.utiliz_online[i].nume %>][<%- locals.utiliz_online[i].prenume %>]</li> 
+                            <%}%>
+                            <% if(locals.utiliz_online.length > 0) { %>
+                                 <li>[<%= locals.utiliz_online[utiliz_online.length-1].username %>]-[<%- locals.utiliz_online[utiliz_online.length-1].nume %>][<%- locals.utiliz_online[utiliz_online.length-1].prenume %>]</li>
+                            <% }  %>
+                         </ol>
+                    </p>
+                </section>
+                <section id="statistici">
+                    <h2>Utilizatori si statistici</h2>
+                    <%- "Ip-ul dumneavoasta este: " + locals.ip %>
+                    <p>Locatia dumneavoasta este: <%- locals.locatie %></p>
+                    <p id="banner">Ultimul produs cumparat: <button id="ok_cookies">Ok</button></p>
+                </section>
+                <section id="server">
+                    <h2><span class="fas fa-solid fa-sync fa-spin"></span> Site si server</h2>
+                    <%
+                    dataServer=new Date();
+                    sirData=dataServer.getHours()+":"+dataServer.getMinutes()+":"+dataServer.getSeconds()
+    
+                    %>
+                    <p>Pe localhost vor fi identice; se va observa diferența pe Heroku</p>
+                    <p>Ora server:<span id="data_server"><%= sirData %></span></p>
+                    <p>Ora client:<span id="data_client"></span></p>
+                    <script>
+                        function zero(nr){
+                            if (nr<10) return "0"+nr;
+                            return nr;
+                        }
+                        
+                        d=new Date()
+                        document.getElementById("data_client").innerHTML=zero(d.getHours())+":"+zero(d.getMinutes())+":"+zero(d.getSeconds());
+    
+                        function actualizeazaElemData(id_div){
+                            var data_div=document.getElementById(id_div);
+                            if (data_div.innerHTML!="")
+                            {
+                                var timp=data_div.innerHTML.split(":")
+                                var dt=new Date(2000,1,15, timp[0],timp[1], timp[2] );//nu conteaza data (am pus valori random pentru an, luna si zi) ci timpul
+                            }
+                            else
+                                var dt=new Date();
+                            dt.setSeconds(dt.getSeconds()+1)
+                            data_div.innerHTML=zero(dt.getHours())+":"+zero(dt.getMinutes())+":"+zero(dt.getSeconds());
+                        }
+                        function actualizeazaData(){
+                            actualizeazaElemData("data_client");
+                            actualizeazaElemData("data_server");
+                        }
+                        actualizeazaData()
+                        setInterval(actualizeazaData,1000)
+                    </script>
+                </section>
+                <%- include("../Fragmente/galerie_statica.ejs") %>
+                <%- include("../Fragmente/galerie_dinamica.ejs") %> 
+
+            </div>
+        </main>
+        <%- include("../Fragmente/footer.ejs") %>
+    </body>
+</html>

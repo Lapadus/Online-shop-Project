@@ -1,0 +1,74 @@
+#rechizite, #birotica, #papetarie, #librarie{
+    display: block;
+    border: 2px solid var(--fundal_border);
+    background-color: var(--fundal_navigation);
+    margin-left: 15px;
+    padding: 10px;
+    float: left;
+    text-align: center;
+    font-weight: bold;
+}
+#welcome_img{
+    width: 25%;
+    height: 60%;
+    float: right;
+    margin-right: 50px;
+    margin-top: -170px;
+}
+#orar{
+    text-align: center;
+}   
+#agenda_img{
+    width: 30%;
+    height: 30%;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+#intrebari{
+    text-align: center;
+}
+div#info {
+    font-family: Roboto;
+}
+#tabel{
+    caption-side: bottom;
+    border-collapse: collapse;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-width: 7px;
+    border-style: inset;
+    border-color: var(--fundal_border);
+}
+#tabel td, #tabel th {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    padding: 5px;
+}
+#tabel tbody tr:nth-child(even){
+    border-style: solid;
+    border-top-color: var(--fundal_border);
+    border-bottom-color: var(--fundal_navigation);
+}
+#tabel thead tr, #tabel tbody tr th{
+    background-color: var(--fundal_navigation);
+}
+#tabel tbody tr{
+    outline-width: 0; 
+    outline-style: solid;
+    outline-color: var(--outline_tabel);
+    transition: outline-width 300ms linear;
+}
+#tabel tbody tr:hover{
+    outline-width: 5px; 
+    outline-style: solid;
+    outline-color: var(--outline_tabel);
+}
+#watermark{
+    display: none;
+}
+#container-tabel{
+    overflow-x: scroll;
+    width: 90%;
+}

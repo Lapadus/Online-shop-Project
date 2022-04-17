@@ -1,0 +1,10 @@
+@media screen and (min-width: 651px) and (max-width: 850px) {
+    ul.meniu li{
+        width: 13vw;
+        font-size: 14px;
+        height:100%;
+    }
+    ul.meniu{
+        height: 100%;
+    }
+}

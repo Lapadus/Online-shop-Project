@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <meta name="description" content="Cele mai bune produse de birotică și papetărie, cele mai cool rechizite școlare,cele mai cunoscute carti">
+        <meta name="keywords" content="librărie, școala, papetărie, rechizite">
+        <%- include("../Fragmente/head.ejs") %>
+
+        <script>
+			// populez inputurile din pagina de profil cu datele din tabel (incarcate prin EJS)
+			window.addEventListener("DOMContentLoaded", function(){
+				document.getElementById("inp-username").value="<%= locals.utilizator.username %>";
+				document.getElementById("inp-username").readOnly=true;
+				document.getElementById("inp-nume").value="<%= locals.utilizator.nume %>";
+				document.getElementById("inp-prenume").value="<%= locals.utilizator.prenume %>";
+				document.getElementById("inp-email").value="<%= locals.utilizator.email %>";
+                <% if( locals.utilizator.problema_vedere){ %>
+                    document.getElementById('i_check1').checked = true;
+                <% }else{ %>
+                    document.getElementById('i_check1').checked = false;
+                <% } %>
+                document.getElementById('text_parola').innerHTML = 'Parola noua: ';
+				var optiuni=document.getElementById("sel-culoare").options;
+				for (let opt of optiuni)
+					if (opt.value=="<%= locals.utilizator.culoare_chat %>")
+						opt.selected=true;
+			});
+		</script>
+    
+    </head>
+    <body id='variabile'>
+        <%- include("../Fragmente/header.ejs") %>
+        <main>
+            <section>
+				<h2>Profil</h2>
+                <p>Nu uita sa reactualizezi datele pentru a ne tine la curent cu noutatile!</p>
+                <%- include("../Fragmente/formular.ejs", {action:"/profil"}) %>
+            </section>
+        </main>
+        <%- include("../Fragmente/footer.ejs") %>
+    </body>
+</html>

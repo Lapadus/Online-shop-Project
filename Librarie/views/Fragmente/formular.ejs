@@ -1,0 +1,56 @@
+<form id="form_inreg" method="post" class="date" action="<%- locals.action%>" id="inregistrare" enctype="multipart/form-data">
+    <!--cand dam submit se uita la metoda din form care e post le cripteaza si le trimite la action adica la /inreg, 
+        daca era get se vedeau datele in bara de adrese
+        enctype multipart folosit pentru a trimite fisiere, imparte un fisier mare in pachetele mai mici -->
+                        <p>
+                            <label>
+                                Username: <input type="text" name="username" id="inp-username" required pattern="[A-Za-z0-9]+">
+                            </label>    
+                        </p>
+                        <p>
+                            <label>
+                                Nume: <input type="text" name="nume" id="inp-nume" required>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                Preume: <input type="text" name="prenume" id="inp-prenume" required>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                Parola: <input type="password" name="parola" id="parl" required>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <span id="text_parola">Reintroduceti parola</span>: <input type="password" name="rparola" id="rparl" >
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                Email: <input type="text" name="email"  id="inp-email" required size="50">
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                Culoare chat: <select name="culoareText" id='sel-culoare'>
+                                    <option value="red" selected>Rosu</option>
+                                    <option value="green">Verde</option>
+                                    <option value="black">Negru</option>
+                                </select>
+                            </label>
+                        </p>
+                        <p>
+                            <label>Problema vedere
+                                <input id="i_check1" name="gr_chck" value="30" type="checkbox"/>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                Poza: <input type="file" name="poza" >
+                            </label>
+                        </p>
+                        <input type="submit" value="Trimite"> <!--trimite datele cu metoda post-->
+                        <input type="reset" value="Reseteaza"> <!--goleste inputurile-->
+                    </form>

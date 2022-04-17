@@ -1,0 +1,39 @@
+#link-top{
+    position:fixed;
+    bottom:0.4em;
+    text-decoration: none;
+    opacity:0.5;
+    left:0.4em;
+    width:2.5rem;
+    box-sizing: border-box;
+    height:2.5rem;
+    line-height:3rem;
+    text-align:center;
+    border:1px solid var(--fundal_border);
+    border-top-left-radius:50%;
+    border-top-right-radius:50%;
+    background-color: var(--fade_nav);
+    box-shadow:inset var(--fundal_border) 0px 0px 15px;
+    transition: width 500ms linear;
+    transition: height 500ms linear;
+    transition: background-color 1s linear;
+    transition: box-shadow 500ms linear;
+}
+#sageata{
+    font-size: 36px;
+    color: var(--fundal_border);
+    transition: font-size 500ms linear;
+    
+}
+div#sageata:hover{
+    font-size: 48px;
+    color: rgb(111, 26, 7);
+}
+#link-top:hover{
+    opacity:1;
+    width: 2.8rem;
+    height: 2.8rem;
+    background-color: var(--fundal_navigation);
+    box-shadow:inset rgb(75, 17, 4) 0px 0px 15px;
+    /*background-image: linear-gradient(to right, black);*/
+}  

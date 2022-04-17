@@ -1,0 +1,130 @@
+body{
+    --fundal_pagina: rgb(240, 234, 210);
+    --fundal_sectiuni: rgba(203, 223, 189, 0.548);
+    --fundal_navigation: rgb(241, 156, 121);
+    --fade_nav: rgba(224, 122, 95);
+    --active_nav: rgb(238, 137, 94);
+    --fundal_border: rgb(164, 74, 63);
+    --outline_tabel: rgba(164, 74, 63, 0.7);
+    --iframe_tab: rgba(224, 122, 95,0.95);
+    --grosime_border: 1px;
+    --tip_border: solid;
+    --dimensiune_padding: 15px;
+    --lungime_box: 150px;
+}
+body{
+    background-color: var(--fundal_pagina);
+}
+body.dark{
+    --fundal_pagina: rgb(196, 193, 185);
+    --fundal_sectiuni: rgba(217, 230, 209, 0.548);
+    --fundal_navigation: rgba(124, 66, 41, 0.801);
+    --fade_nav: rgb(190, 117, 96);
+    --active_nav: rgba(182, 134, 114, 0.678);
+    --fundal_border: rgb(164, 74, 63);
+    --outline_tabel: rgba(131, 59, 50, 0.61);
+    --iframe_tab: rgba(187, 78, 48, 0.39);
+    --grosime_border: 1px;
+    --tip_border: solid;
+    --dimensiune_padding: 15px;
+    --lungime_box: 150px;
+}
+/*
+#container{
+    display: grid;
+    grid-template-areas: "welcome welcome welcome"
+                         "noutati noutati anunturi"
+                         "promotii promotii promotii"
+                         "bestseller diy diy"
+                         "orar orar orar"
+                         "intrebari intrebari intrebari";
+    grid-gap: 1.5em; 
+    margin-top: 20px;
+}
+*/
+@media screen and (min-width: 851px) {
+#container{
+    display: grid;
+    grid-template-areas: "welcome welcome welcome welcome"
+                         "welcome welcome welcome welcome"
+                         "calendar orar orar anunturi"
+                         "online_user orar orar anunturi"
+                         "online_user statistici statistici server"
+                         "noutati noutati promotii promotii"
+                         "noutati noutati diy diy"
+                         "bestseller bestseller diy diy"
+                         "intrebari intrebari intrebari intrebari"
+                         "galerie_statica galerie_statica galerie_statica galerie_statica"
+                         "galerie_animata galerie_animata galerie_animata galerie_animata";
+    grid-template-columns: repeat(1fr, 4);
+    grid-gap: 1.5em; 
+    margin-top: 20px;
+    width: 100%;
+}
+}
+#container>*{
+    border: 3px solid var(--fundal_border);
+    border-radius: 20px;
+    background-color: var(--fundal_sectiuni);
+    padding-left: 5%;
+    padding-bottom: 15px;
+    padding-right: 5%;
+    box-shadow: 0px 0px 10px 5px grey;
+}
+#welcome{
+    grid-area: welcome;
+}
+#noutati{
+    grid-area: noutati;
+}
+#anunturi{
+    grid-area: anunturi;
+}
+#promotii{
+    grid-area: promotii;
+}
+#bestseller{
+    grid-area: bestseller;
+}
+#diy{
+    grid-area: diy;
+}
+#orar{
+    grid-area: orar;
+}
+#intrebari{
+    grid-area: intrebari;
+}
+#calendara{
+    grid-area: calendar;
+}
+#online_user{
+    grid-area: online_user;
+}
+#statistici{
+    grid-area: statistici;
+}
+#server{
+    grid-area: server;
+}
+#galerie_statica{
+    grid-area: galerie_statica;
+}
+#galerie_animata{
+    grid-area: galerie_animata;
+}
+@media (max-width: 480px) {
+    body{
+        font-size: 15px;
+    }
+}
+@media (min-width: 481px) and (max-width: 810px) {
+    body{
+        font-size: 16px;
+    }
+}
+@media (min-width: 811px) {
+    body{
+        font-size: 19px;
+    }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <meta name="description" content="Cele mai bune produse de birotică și papetărie, cele mai cool rechizite școlare,cele mai cunoscute carti">
+        <meta name="keywords" content="librărie, școala, papetărie, rechizite">
+        <%- include("../Fragmente/head.ejs") %>
+        <link href="/Resurse/Css/produse_mic.css" rel="stylesheet" type="text/css" />
+     
+
+    </head>
+    <body id='variabile'>
+        <%- include("../Fragmente/header.ejs") %>
+        <main>
+			
+			<h1>Trimite un mesaj către site</h1>
+            <form method="post" action="/contact">
+                <label>Mesajul dumneavoastră:<br/>
+                    <textarea cols="30" rows="5" name="mesaj" placeholder="Scrieți tot ce aveți pe suflet!"></textarea>
+                </label><br/>
+                <input type="submit" value="Trimite mesajul!">
+            </form>
+			<section>
+				<h2>Mesaje:</h2>
+				<% if (locals.mesaje) {
+					var mesajeSort=locals.mesaje.sort(function(a,b) {return (new Date(b.attributes.data)).getTime()-(new Date(a.attributes.data)).getTime()})
+					for (let msg of mesajeSort) { 
+						let dt=new Date(msg.attributes.data);
+						%>
+						<article class="mesaj-c">
+							<h3><span class="username"><%= msg.attributes.username%></span> spune:</h3>
+							<% if(msg.attributes.rol == 'admin'){ %>
+								<p style="color: red"><%= msg.elements[0].text %></p>
+							<% }else { %>
+								<p style="color: black"><%= msg.elements[0].text %></p>
+							<% } %>
+							<p><small><time datetime="<%= dt.getUTCDate() %>"><%= dt.toLocaleString('ro-RO', {
+														weekday: 'long', 
+														day: 'numeric',
+														year: 'numeric', 
+														month: 'long', 
+														hour: 'numeric',
+														minute: 'numeric', 
+														second: 'numeric',
+													}) %></time></small>
+							</p>
+						</article>
+					<% } %>
+				<% } %>
+			</section>
+		</main>
+        <%- include("../Fragmente/footer.ejs") %>
+    </body>
+</html>

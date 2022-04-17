@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contact>
+    <mesaje>
+        <mesaj username="anonim" data="Sat Jun 12 2021 12:17:58 GMT+0300 (Eastern European Summer Time)">Salut!</mesaj>
+        <mesaj username="Admin" data="Sun Jan 23 2022 12:27:02 GMT+0200 (Eastern European Standard Time)" rol="admin">test</mesaj>
+        <mesaj username="test" data="Sun Jan 23 2022 12:29:23 GMT+0200 (Eastern European Standard Time)" rol="comun">test</mesaj>
+        <mesaj username="test" data="Sun Jan 23 2022 12:29:42 GMT+0200 (Eastern European Standard Time)" rol="comun">test</mesaj>
+        <mesaj username="Admin" data="Wed Jan 26 2022 19:28:04 GMT+0200 (Eastern European Standard Time)" rol="admin">sunt admin</mesaj>
+    </mesaje>
+</contact>

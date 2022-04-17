@@ -1,0 +1,36 @@
+@media screen and (min-width: 651px) and (max-width: 850px) {
+    #container{
+    display: grid;
+    grid-template-areas: "welcome welcome"
+                         "orar orar"
+                         "calendar anunturi"
+                         "online_user server"
+                         "statistici statistici"
+                         "noutati promotii"
+                         "diy diy"
+                         "bestseller bestseller"
+                         "intrebari intrebari"
+                         "galerie_statica galerie_statica"
+                         "galerie_animata galerie_animata";
+
+    grid-gap: 1.5em; 
+    margin-top: 20px;
+    grid-template-columns: repeat(1fr, 2);
+    width: 100%;
+    }
+    img#welcome_img{
+        display: none;
+    }
+    #home{
+        display: none;
+    }
+    /*
+    nav span{
+        height: 3.17rem;
+        font-size: x-large;
+    }
+    */
+    div#inl{
+        display: inline-block;
+    }
+}

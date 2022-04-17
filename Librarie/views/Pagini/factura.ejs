@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Factură</title>
+		<style>
+			#tabl{
+				border-collapse:collapse;
+			}
+			#tabl td, #tabl th{
+				border:1px solid black;
+			}
+			p{color:red};
+		</style>
+	</head>
+	<body>
+		<h1>Factură RalUnivers</h1>
+		<p>Stimate domn <%-locals.utilizator.nume %>, aveți aici lista de produse achiziționate.</p> 
+		<table id="tabl">
+			<thead>
+				<tr>
+					<th>Produs</th>
+					<th>Preț</th>
+					<th>Cantitate</th>
+                    <th>Imagine</th>
+                    <th>Culoare</th>
+                    <th>Garantie</th>
+                    <th>Categorie</th>
+					<th>QR</th>
+				</tr>
+			</thead>
+			
+			<tbody>
+                <% 
+				function isItemInArray(array, item) { /// cautaTot= True (cauta si dupa id si dupa cantitate) cautaTot= False (cauta dupa id )
+					for (var i = 0; i < array.length; i++) {
+					 if (array[i][0] == item) {
+						return i;   
+						}
+					}
+					return -1;
+				}
+
+				var suma=0;
+				for (let prod of locals.produse) {
+					let ind_prod = isItemInArray(locals.cantitate, prod.id)
+					suma+=parseFloat(prod.pret) * locals.cantitate[ind_prod][1];
+					 %>
+                    <tr>
+                        <td><%-  prod.nume %></td>
+                        <td><%-  prod.pret %> lei</td>
+						<td><%-  locals.cantitate[ind_prod][1] %> bucati</td>
+                        <td><img src="<%- locals.protocol%><%- locals.domeniu %><%- prod.imagine %>"></td>
+                        <td><%-  prod.culoare %></td>
+                        <td><%-  prod.timp_garantie %> zile</td>
+                        <td><%-  prod.categ_mica %></td>
+						<td><img src="<%- locals.protocol%><%- locals.domeniu %>/Resurse/Imagini/qrcode/<%-  prod.id %>.png"></td>
+                    </tr>
+                <% } %>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan="8">Total: <%- suma %></td>
+				</tr>
+			</tfoot>
+		</table>
+	</body>
+</html>

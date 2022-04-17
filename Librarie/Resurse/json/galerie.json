@@ -1,0 +1,305 @@
+{
+    "cale_galerie" : "Resurse/Imagini/Pag1",
+        "imagini": [
+            {
+                "fisier":"zapada_om.png",
+                "descriere":"Om de zapada",
+                "anotimp": "iarna",
+                "titlu": "Om de zapada",
+                "galerieAnimata": "true"
+            },
+            {
+                "fisier":"shelf.png",
+                "descriere":"Raft",
+                "anotimp": "iarna",
+                "titlu": "Shelf",
+                "galerieAnimata": "true"
+            },
+            {
+                "fisier":"urs.png",
+                "descriere":"Urs Polar",
+                "anotimp": "iarna",
+                "titlu": "Urs Polar",
+                "galerieAnimata": "true"
+            },
+            {
+                "fisier":"baiat.png",
+                "descriere":"Baiat",
+                "anotimp": "iarna",
+                "titlu": "Baiat",
+                "galerieAnimata": "true"
+            },
+            {
+                "fisier":"bus.png",
+                "descriere":"Bus",
+                "anotimp": "iarna",
+                "titlu": "Bus",
+                "galerieAnimata": "true"
+            },
+            {
+                "fisier":"fulg.png",
+                "descriere":"Fulg nea",
+                "anotimp": "iarna",
+                "titlu": "Fulg nea",
+                "galerieAnimata": "true"
+            },
+            {
+                "fisier":"iarna_casa.png",
+                "descriere":"Casa",
+                "anotimp": "iarna",
+                "titlu": "Casa",
+                "galerieAnimata": "true"
+            },
+            {
+                "fisier":"merry.png",
+                "descriere":"Craciun fericit",
+                "anotimp": "iarna",
+                "titlu": "Craciun fericit",
+                "galerieAnimata": "true"
+            },
+            {
+                "fisier":"geniu.png",
+                "descriere":"Geniu",
+                "anotimp": "iarna",
+                "titlu": "Geniu",
+                "galerieAnimata": "true"
+            },
+            {
+                "fisier":"chimie.png",
+                "descriere":"Tabla",
+                "anotimp": "iarna",
+                "titlu": "Chimie",
+                "galerieAnimata": "true"
+            },
+            {
+                "fisier":"blonde.png",
+                "descriere":"Fata blonda",
+                "anotimp": "iarna",
+                "titlu": "Fata blonda",
+                "galerieAnimata": "true"
+            },
+            {
+                "fisier":"joaca.png",
+                "descriere":"Joaca",
+                "anotimp": "iarna",
+                "titlu": "Joaca",
+                "galerieAnimata": "true"
+            },
+            {
+                "fisier":"pinguin.png",
+                "descriere":"Pinguin",
+                "anotimp": "iarna",
+                "titlu": "Pinguin",
+                "galerieAnimata": "true"
+            },
+            {
+                "fisier":"dovleac_festiv.png",
+                "descriere":"Dovleac festiv",
+                "anotimp": "toamna",
+                "titlu": "Dovleac festiv",
+                "alt": "Dovleac festiv",
+                "galerieAnimata": "true"
+            },
+            {
+                "fisier":"shelf.png",
+                "descriere":"Raft",
+                "anotimp": "toamna",
+                "titlu": "Shelf",
+                "alt": "Rafturi",
+                "galerieAnimata": "true"
+            },
+            {
+                "fisier":"dovleac_vesel.png",
+                "descriere":"Dovleac vesel",
+                "anotimp": "toamna",
+                "titlu": "Dovleac vesel",
+                "alt": "dovleac vesel"
+            },
+            {
+                "fisier":"fata_ploaie.png",
+                "descriere":"Fata in ploaie!",
+                "anotimp": "toamna",
+                "titlu": "Fata ploaie!"
+            },
+            {
+                "fisier":"halloween.png",
+                "descriere":"Halloween",
+                "anotimp": "toamna",
+                "titlu": "Halloween"
+            },
+            {
+                "fisier":"fata_vulpe.png",
+                "descriere":"Fata cu vulpe",
+                "anotimp": "toamna",
+                "titlu": "Fata cu vulpe"
+            },
+            {
+                "fisier":"umbrela.png",
+                "descriere":"Umbrela",
+                "anotimp": "toamna",
+                "titlu": "Umbrela"
+            },
+            {
+                "fisier":"ploaie.png",
+                "descriere":"PLoaie",
+                "anotimp": "toamna",
+                "titlu": "Ploaie"
+            },
+            {
+                "fisier":"owl.png",
+                "descriere":"Bufnita",
+                "anotimp": "toamna",
+                "titlu": "Bufnita",
+                "alt": "Bufnita"
+            },
+            {
+                "fisier":"licenta.png",
+                "descriere":"Licenta",
+                "anotimp": "toamna",
+                "titlu": "Licenta",
+                "alt": "Licenta imag"
+            },
+            {
+                "fisier":"dinto.png",
+                "descriere":"Copii",
+                "anotimp": "toamna",
+                "titlu": "Copii",
+                "alt": "Copii"
+            },
+            {
+                "fisier":"creata.png",
+                "descriere":"Fata creata",
+                "anotimp": "toamna",
+                "titlu": "Fata creata",
+                "alt": "Fata creata"
+            },
+            {
+                "fisier":"uniforma.png",
+                "descriere":"Uniforma",
+                "anotimp": "toamna",
+                "titlu": "Uniforma",
+                "alt": "Uniforma"
+            },
+            {
+                "fisier":"zmeu.png",
+                "descriere":"Zmeu",
+                "anotimp": "vara",
+                "titlu": "Zmeu"
+            },
+            {
+                "fisier":"soare.png",
+                "descriere":"Soare",
+                "anotimp": "vara",
+                "titlu": "Soare"
+            },
+            {
+                "fisier":"plaja_vara.png",
+                "descriere":"Plaja vara",
+                "anotimp": "vara",
+                "titlu": "Plaja vara"
+            },
+            {
+                "fisier":"nisip.png",
+                "descriere":"Nisip",
+                "anotimp": "vara",
+                "titlu": "Nisip"
+            },
+            {
+                "fisier":"tabla_vara.png",
+                "descriere":"Tabla vara",
+                "anotimp": "vara",
+                "titlu": "Tabla vara"
+            },
+            {
+                "fisier":"plaja.png",
+                "descriere":"PLaja",
+                "anotimp": "vara",
+                "titlu": "plaja"
+            },
+            {
+                "fisier":"absolvent.png",
+                "descriere":"Absolvent",
+                "anotimp": "vara",
+                "titlu": "Absolvent"
+            },
+            {
+                "fisier":"tabla_vara.png",
+                "descriere":"Tabla vara",
+                "anotimp": "vara",
+                "titlu": "Tabla vara"
+            },
+            {
+                "fisier":"scoala_gata.png",
+                "descriere":"Gata scoala",
+                "anotimp": "vara",
+                "titlu": "Scoala gata"
+            },
+            {
+                "fisier":"baiat.png",
+                "descriere":"Baiat",
+                "anotimp": "vara",
+                "titlu": "Baiat"
+            },
+            {
+                "fisier":"gargarita.png",
+                "descriere":"Gargarita",
+                "anotimp": "vara",
+                "titlu": "Gargarita"
+            },
+            {
+                "fisier":"abc.png",
+                "descriere":"ABC",
+                "anotimp": "vara",
+                "titlu": "ABC"
+            },
+            {
+                "fisier":"book.png",
+                "descriere":"Carte",
+                "anotimp": "vara",
+                "titlu": "Carte"
+            },
+            {
+                "fisier":"birds.png",
+                "descriere":"Pasari",
+                "anotimp": "primavara",
+                "titlu": "Pasari"
+            },
+            {
+                "fisier":"agend.png",
+                "descriere":"Agenda",
+                "anotimp": "primavara",
+                "titlu": "Agenda"
+            },
+            {
+                "fisier":"camp.png",
+                "descriere":"Camp",
+                "anotimp": "primavara",
+                "titlu": "Camp"
+            },
+            {
+                "fisier":"gargarita.png",
+                "descriere":"Gargarita",
+                "anotimp": "primavara",
+                "titlu": "Gargarita"
+            },
+            {
+                "fisier":"primavara.png",
+                "descriere":"Primavara",
+                "anotimp": "primavara",
+                "titlu": "Primavara"
+            },
+            {
+                "fisier":"copii.png",
+                "descriere":"Copii",
+                "anotimp": "primavara",
+                "titlu": "copii"
+            },
+            {
+                "fisier":"pasare.png",
+                "descriere":"Pasare",
+                "anotimp": "primavara",
+                "titlu": "pasare"
+            }
+
+        ]
+}

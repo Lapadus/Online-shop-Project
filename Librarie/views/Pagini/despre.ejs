@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <meta name="description" content="Cele mai bune produse de birotică și papetărie, cele mai cool rechizite școlare,cele mai cunoscute carti">
+        <meta name="keywords" content="librărie, școala, papetărie, rechizite">
+        <%- include("../Fragmente/head.ejs") %>
+    </head>
+    <body id='variabile'>
+        <%- include("../Fragmente/header.ejs") %>
+        <main>
+            <% if(locals.utilizator && locals.utilizator.problema_vedere){ %>
+            <section style="font-size: 1.1em;">
+            <% }else{ %>
+                <section >
+                <% } %>
+                <h2>Despre noi</h2>
+                <section>
+                    <h3>Librăria, universul copilariei</h3>
+                    <p>Aici este locul care iti va aminti de cele mai frumoase momente ale copilariei.</p>
+                    
+                    <video controls poster="Resurse/Imagini/Pag1/welcome.png" preload="auto">
+                        <source src="Resurse/Video/school.mp4" type="video/mp4">
+                        <source src="Resurse/Video/school.ogv" type="video/ogv">
+                  
+                        <track  src="Resurse/Video/Tracks/captions_school_en.vtt" kind="captions" srclang="ro" label="engleză" /> 
+                        <track  default src="Resurse/Video/Tracks/captions_school.vtt" kind="captions" srclang="en" label="română" />
+                    </video>
+                </section>
+            </section>
+            
+            <%- include("../Fragmente/galerie_statica.ejs") %> 
+        </main>
+        <%- include("../Fragmente/footer.ejs") %>
+    </body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <meta name="description" content="Cele mai bune produse de birotică și papetărie, cele mai cool rechizite școlare,cele mai cunoscute carti">
+        <meta name="keywords" content="librărie, școala, papetărie, rechizite">
+        <%- include("../Fragmente/head.ejs") %>
+        <style>
+            #mesaje_chat{
+                border:1px solid black;
+                height:200px;
+                overflow:auto;
+                width:500px;
+                background: white;
+            margin-top: 100px;
+            }
+            </style>
+            <script type="text/javascript" src="/Resurse/client-dist/socket.io.js"></script> 
+            <script>port=<%= port %></script>
+            <script>
+            
+            socketUrl = "../../";  
+            if(document.location.href.indexOf("localhost") != -1) {  
+                socketUrl = "http://127.0.0.1:"+port;
+            }
+            //const socket = io(socketUrl,{reconnect: true});  
+            socket = io();
+            socket.on("mesaj_nou", (nume, culoare, mesaj,emoj,data, culoare_fundal, format_data) => {  
+            
+                var chat=document.getElementById("mesaje_chat");
+                chat.innerHTML+=`<p>(${format_data},${data})<b> ${nume} </b><span style='color:${culoare}'>:    ${mesaj} ${emoj}</span> `;
+                chat.style.background = culoare_fundal;
+                chat.scrollTop=chat.scrollHeight;
+            });
+
+            function formatDate(date) {
+                var d = new Date(date),
+                    month = '' + (d.getMonth() + 1),
+                    day = '' + d.getDate(),
+                    year = d.getFullYear();
+
+                if (month.length < 2) 
+                    month = '0' + month;
+                if (day.length < 2) 
+                    day = '0' + day;
+
+                return [year, month, day].join('-');
+            }
+            
+            function trimite(){
+                var culoare=document.getElementById("culoare").value;
+                var culoare_fundal=document.getElementById("culoare_fundal").value;
+                var nume=document.getElementById("nume").value;
+                var radbtns=document.getElementsByName("gr_rad");
+                var mesaj=document.getElementById("mesaj").value;
+                for (let rad of radbtns){
+                        if (rad.checked){
+                            var emoj=rad.value;
+                            break;
+                        }
+                    }
+                
+                var date=new Date();
+                console.log(date.toLocaleTimeString('ro-RO'))
+                data=date.toLocaleTimeString('ro-RO')
+                var format_data = formatDate(date);
+                var http = new XMLHttpRequest();
+                var url = '/mesaj';
+                var params = `culoare_fundal=${culoare_fundal}&culoare=${culoare}&nume=${nume}&mesaj=${mesaj}&emoj= ${emoj} &data=${data}&format_data=${format_data}`;
+                http.open('POST', url, true);
+        
+                
+                http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                
+                http.onreadystatechange = function() {
+                    if(http.readyState == 4 && http.status == 200) {
+                        //alert(http.responseText);
+                    }
+                }
+                http.send(params);
+        }
+            </script>
+    </head>
+    <body id='variabile'>
+        <%- include("../Fragmente/header.ejs") %>
+        <div id="chat">
+            <h2>Chat</h2>
+            <div id="mesaje_chat"></div>
+            <label>
+             <input type="text" id="nume" style='display: none' name="<nume>" value="<%- locals.utilizator.username %>">
+            </label><br/>
+            <label>
+        
+                Mesaj: <textarea id="mesaj" name="mesaj" value="bau! "></textarea>
+            </label><br/>
+            <label>
+            Culoare text: <select id="culoare" name="culoare">
+            <option value="black">black</option>
+            <option value="green">green</option>
+            <option value="blue">blue</option>
+            </select>
+            
+            </label><br/>
+            <label>
+                Culoare fundal chat: <select id="culoare_fundal" name="culoare_fundal">
+                <option value="white">white</option>
+                <option value=var(--fundal_sectiuni)>vernil</option>
+                <option value="red">red</option>
+                </select>
+                
+                </label><br/>
+            <div> Fete expresive:</br>
+                <label> 🙂
+                    <input id="i_rad1"  name="gr_rad" value=":)" type="radio"/>
+                </label></br>
+                <label>    😦
+                    <input id="i_rad2"  name="gr_rad" value=":(" type="radio"/>
+                </label></br>
+                <label> 😐
+                    <input id="i_rad3" name="gr_rad" value=":|" type="radio"/>
+                </label></br>
+                <label>Nimic
+                    <input id="i_rad4" checked name="gr_rad" value="" type="radio"/>
+                </label></br>
+            </div>
+            <button onclick="trimite()">ok</button>
+        </div>
+        <%- include("../Fragmente/footer.ejs") %>
+    </body>
+</html>

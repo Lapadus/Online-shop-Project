@@ -1,0 +1,72 @@
+<header>
+    <h1 id="titlu">RalUnivers - Universul tuturor</h1>
+    <p>Librărie, Papetărie și Birotică, Rechizite. Magazinul tău preferat.</p>
+    <p>Cicero spunea faptul ca <q lang="ro" cite="https://www.jovis.ro/blog/dezvoltare-personala/motivational/51-de-citate-inspirationale-despre-carti-si-citit/">O cameră fără cărți e ca un corp fără suflet.</q></p>
+</header>
+<% if(!locals.utilizator) { %>
+    <p>Va rugam sa va logati: </p>
+    <form id="login" method="post" action="/login">
+        <label>
+            Username: <input type="text" name="username">
+        </label>
+        <label>
+            Parola: <input type="password" name="parola">
+        </label>
+        <input type="submit" value="Login">
+    </form>
+    <% if(locals.mesajLogin) { %>
+        <p style="color: red">Eroare: <%- locals.mesajLogin %></p>
+    <% } %>
+<% }else{ %>
+    <p title="logout">Iesire <a href="/logout"><%= locals.utilizator.username%></a></p>
+    <%}%>
+<nav>
+    
+        <label id="hamburger" for="ch-menu">
+            <img src="Resurse\Imagini\Hamburger_icon_alb.png" alt="menu">
+        </label>
+        <input id="ch-menu" type="checkbox">
+    
+        <ul class="meniu">
+        <li><div id="inl"><span class="fas fa-solid fa-house"></span><div id="home">Acasă</div></div>
+            <ul>
+                <li><a href="/index#welcome">Bine ați venit!</a></li>
+                <li><a href="/index#noutati">Noutăți</a></li>
+                <li><a href="/index#anunturi">Anunturi</a></li>
+                <li><a href="/index#promotii">Promoții</a></li>
+                <li><a href="/index#bestseller"><i lang="en">Bestsellers</i></a></li>
+                <li><a href="/index#diy">Idei <abbr title="Do it youself"><i>DIY</i></abbr></a></li>
+                <li><a href="/index#orar">Orar</a></li>
+                <li><a href="/index#intrebari">Intrebări</a></li>
+            </ul>
+        </li> 
+        <li><a href="/despre">Despre noi</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><div>Produse</div>
+            <ul>
+                <li><a href="/produse">Toate</a></li><!--
+                <li><a href="/produse?tip=rechizite">Rechizite</a></li>
+                <li><a href="/produse?tip=arte plastice">Arte plastice</a></li>
+                <li><a href="/produse?tip=papetarie">Papetărie</a></li>
+                <li><a href="/produse?tip=birotica">Birotică</a></li>
+                <li><a href="/produse?tip=articole scoala">Articole școală</a></li>-->
+                <% for(let opt of locals.categProduse){ %>
+                    <li><a href="/produse?tip=<%- opt %>"><%- opt %> </a></li>
+                <% } %>
+            </ul>
+        </li>
+        <!--<li><a href="/inregistrare">Înregistrare</a></li>-->
+        <% if(!locals.utilizator){ %>
+            <li><a href="/inregistrare">Înregistrare</a></li>
+        <% } %>
+        <% if(locals.utilizator && locals.utilizator.rol == 'admin'){ %>
+            <li><a href="/useri">Utilizatori</a></li>
+        <% } %>
+        <li><a href="/cos_virtual">Coș Virtual</a></li>
+        <% if(locals.utilizator){ %>
+            <li><a href="/profil"><%- locals.utilizator.username %></a></li>
+            <li><a href="/chat">Chat</a></li>
+            <li><a href="/logout">Logout</a></li>
+        <% } %>
+    </ul>
+</nav>

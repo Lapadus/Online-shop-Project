@@ -1,0 +1,41 @@
+h2, h3{
+    text-align: center;
+}
+h3{
+    text-decoration: underline;
+}
+.art-produs{
+    margin:0 auto;
+    width:70%;
+    max-width:700px;
+    background-color: var(--activ_nav);
+    box-shadow: 0px 0px 10px 5px grey;
+    padding:0.4rem;
+}
+.art-produs p{
+    margin:0;
+    padding:0.4rem;
+    font-weight:bold;
+    font-size:1.1rem;
+}
+.art-produs p span{
+    font-weight: normal;
+}
+.art-produs p:nth-of-type(even){
+    background-color: rgb(250, 223, 211);
+    border: 1px grey solid;
+}
+.art-produs p:nth-of-type(odd){
+    background-color: rgb(241, 168, 136);
+    border: 1px grey solid;
+}
+.imag-produs{
+    text-align: center;
+}
+.imag-produs img{
+    width:50%;
+    height:auto;
+}
+.descimg {
+    display: flex;
+}

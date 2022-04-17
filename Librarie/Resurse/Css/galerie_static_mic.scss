@@ -1,0 +1,33 @@
+@media screen and (max-width: 650px) {
+    #grid-galerie {
+        display:grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-row-gap:0.5em;
+        grid-column-gap:0.5em;
+        img{
+            width: 100%;
+        }
+        figcaption{
+            text-align: center;
+        }
+        figure{
+            transition: all 1s linear;
+            border: 2px solid black;
+            &:hover {
+                box-shadow: grey 0px 0px 7px;
+                transform: scaleX(40%);
+                opacity: 0.5;
+                border-radius: 15px;
+            }
+        }
+            
+    }
+    $a: 1;
+    $j: 1;
+    @for $i from 1 through 8{
+        #grid-galerie>figure:nth-child(#{$a}){
+            grid-area: #{$i}/#{$j}/#{$i}/#{$j+1};    
+        } 
+         $a: $a + 1;  
+    }
+}
